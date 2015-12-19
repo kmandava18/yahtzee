@@ -10,7 +10,7 @@ public class YahtzeeGame
     private YahtzeeDie die4;
     private YahtzeeDie die5;
     private static final int NUM_SIDES=6;
-    private YahtzeeScorecard scoreboard=new YahtzeeScorecard();
+    private YahtzeeScorecard scoreboard;
 
 
 
