@@ -4,11 +4,11 @@ public class YahtzeeGame
 {
     /* instance data should include the five yahtzee dice, a scoreboard, and a CONSTANT (static final) variable NUM_SIDES
     which should be set to six (the number of sides on a yahtzee die) */
-    private YahtzeeDie die1=new YahtzeeDie(6);
-    private YahtzeeDie die2=new YahtzeeDie(6);
-    private YahtzeeDie die3=new YahtzeeDie(6);
-    private YahtzeeDie die4=new YahtzeeDie(6);
-    private YahtzeeDie die5=new YahtzeeDie(6);
+    private YahtzeeDie die1;
+    private YahtzeeDie die2;
+    private YahtzeeDie die3;
+    private YahtzeeDie die4;
+    private YahtzeeDie die5;
     private static final int NUM_SIDES=6;
     private YahtzeeScorecard scoreboard=new YahtzeeScorecard();
 
@@ -16,8 +16,14 @@ public class YahtzeeGame
 
 
     /* initializes the dice and scoreboard */
-    public YahtzeeGame()
-    {}
+    public YahtzeeGame() {
+        die5=new YahtzeeDie(NUM_SIDES);
+        die4=new YahtzeeDie(NUM_SIDES);
+        die3=new YahtzeeDie(NUM_SIDES);
+        die2=new YahtzeeDie(NUM_SIDES);
+        die1=new YahtzeeDie(NUM_SIDES);
+        scoreboard=new YahtzeeScorecard();
+    }
 
     /* check to see if the game is over, and while the game is not over call the method takeTurn()
     once the game ends (hint: there are 13 turns in a game of Yahtzee), the method should print a
